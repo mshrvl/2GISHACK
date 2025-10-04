@@ -36,7 +36,6 @@ uiToolingPreviewAndroid = "1.8.3"
 media3Session = "1.8.0"
 runtimeAndroid = "1.8.3"
 datastoreCoreAndroid = "1.1.7"
-kotlinx-serialization-json = "1.8.1"
 firebaseFirestoreKtx = "25.1.4"
 lottie = "6.2.0"
 appcompatVersion = "1.7.1"
@@ -84,18 +83,6 @@ cloudpayments = { group = "ru.cloudpayments.gitpub.integrations.sdk", name = "cl
 google-billing = { module = "com.android.billingclient:billing-ktx", version.ref = "google-billing" }
 ads-indentifier = { module = "com.google.android.gms:play-services-ads-identifier", version.ref = "ads-identifier" }
 
-#Media
-androidx-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
-androidx-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3Exoplayer" }
-androidx-media3-session-v120 = { module = "androidx.media3:media3-session", version.ref = "media3SessionVersion" }
-androidx-media3-ui = { module = "androidx.media3:media3-ui", version.ref = "media3Exoplayer" }
-androidx-media3-common = { module = "androidx.media3:media3-common", version.ref = "media3Exoplayer" }
-
-# DI
-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
-
 # Orbit-MVI
 orbit-core = { group = "org.orbit-mvi", name = "orbit-core", version.ref = "orbit" }
 orbit-viewmodel = { group = "org.orbit-mvi", name = "orbit-viewmodel", version.ref = "orbit" }
@@ -137,7 +124,6 @@ androidx-datastore-core-android = { group = "androidx.datastore", name = "datast
 datastore-preferenses = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastoreCoreAndroid" }
 sdk-map = { module = "ru.dgis.sdk:sdk-map", version.ref = "sdkMap" }
 sdk-map-v1240 = { module = "ru.dgis.sdk:sdk-map", version.ref = "sdkMapVersion" }
-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
 firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
 material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
@@ -168,6 +154,5 @@ network = ["retrofit", "retrofit-converter-gson", "okhttp", "okhttp-logging-inte
 orbit = ["orbit-core", "orbit-viewmodel", "orbit-compose"]
 database = ["room-runtime", "room-ktx", "room-compiler"]
 coroutines = ["coroutines-android", "coroutines-core"]
-media = ["androidx-media3-exoplayer", "androidx-media3-ui", "androidx-media3-common"]
 
 koin = ["koin-android", "koin-compose", "koin-core"]

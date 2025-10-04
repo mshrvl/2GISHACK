@@ -61,7 +61,6 @@ dependencies {
     implementation (libs.sdk.map)
     implementation(libs.bundles.compose)
     implementation(libs.bundles.koin)
-    ksp(libs.hilt.compiler)
 
     implementation(project(":data"))
     implementation(project(":feature:auth"))

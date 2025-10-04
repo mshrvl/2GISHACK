@@ -51,7 +51,6 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.bundles.koin)
-    ksp(libs.hilt.compiler)
     implementation(libs.bundles.orbit)
     implementation (libs.sdk.map)
     implementation(libs.compose.map)
