@@ -8,6 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.example.auth.auth.AuthScreenDestination
 import com.example.auth.nav.authNavGrap
+import com.example.map.nav.mapNavGraph
 
 @Composable
 fun DontPanicApp() {
@@ -21,6 +22,10 @@ fun DontPanicApp() {
         authNavGrap(
             modifier = maxSizeModifier,
             navController = navController,
+        )
+        mapNavGraph(
+            modifier = maxSizeModifier,
+            navController = navController
         )
     }
 }
