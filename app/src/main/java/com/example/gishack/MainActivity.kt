@@ -1,4 +1,4 @@
-package com.example.GISHACK
+package com.example.gishack
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,11 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.GISHACK.ui.theme.MyApplicationTheme
-import dagger.hilt.android.AndroidEntryPoint
-import ru.dgis.sdk.DGis
-
-@AndroidEntryPoint
+import com.example.gishack.ui.theme.MyApplicationTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,10 +16,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    DontPanicApp(modifier = Modifier.padding(innerPadding))
+                    DontPanicApplication(modifier = Modifier.padding(innerPadding))
                 }
             }
-            DGis.initialize(applicationContext)
+            //DGis.initialize(applicationContext)
         }
     }
 }

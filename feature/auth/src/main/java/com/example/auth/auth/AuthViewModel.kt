@@ -1,13 +1,10 @@
 package com.example.auth.auth
 
 import androidx.lifecycle.ViewModel
-import org.orbitmvi.orbit.Container
 import org.orbitmvi.orbit.ContainerHost
 import org.orbitmvi.orbit.viewmodel.container
-import javax.inject.Inject
-import kotlin.math.log
 
-class AuthViewModel @Inject constructor(): ViewModel(), ContainerHost<AuthState, AuthAction> {
+class AuthViewModel() : ViewModel(), ContainerHost<AuthState, AuthAction> {
 
     override val container = container<AuthState, AuthAction>(AuthState())
 

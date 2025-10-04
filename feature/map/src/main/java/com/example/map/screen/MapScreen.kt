@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.serialization.Serializable
+import org.koin.androidx.compose.koinViewModel
 import org.orbitmvi.orbit.compose.collectAsState
 import ru.dgis.sdk.compose.map.MapComposable
 import ru.dgis.sdk.compose.map.MapComposableState
@@ -18,7 +18,7 @@ data object MapScreenDestination
 @Composable
 fun MapScreen(
     modifier: Modifier = Modifier,
-    viewModel: MapViewModel = hiltViewModel()
+    viewModel: MapViewModel = koinViewModel()
 ) {
     val state by viewModel.collectAsState()
     val map by state.map.map.collectAsState()
@@ -29,4 +29,5 @@ fun MapScreen(
     map?.let {
         MyLocationComposable(map = it)
     }
+
 }

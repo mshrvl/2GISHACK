@@ -1,20 +1,16 @@
-package com.example.GISHACK
+package com.example.gishack
 
-import android.app.Application
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.example.auth.auth.AuthScreenDestination
 import com.example.auth.nav.authNavGrap
 import com.example.map.nav.mapNavGraph
 import com.example.map.screen.MapScreenDestination
 
 @Composable
-fun DontPanicApp(
+fun DontPanicApplication(
     modifier: Modifier = Modifier
 ){
     val navController = rememberNavController()

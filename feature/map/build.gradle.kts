@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp.plugin)
-    alias(libs.plugins.hilt.android.plugin)
     alias(libs.plugins.compose)
     alias(libs.plugins.org.jetbrains.kotlin.plugin.serialization)
 }
@@ -49,7 +48,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.bundles.hilt)
+    implementation(libs.bundles.koin)
     ksp(libs.hilt.compiler)
     implementation(libs.bundles.orbit)
     implementation (libs.sdk.map)

@@ -1,4 +1,4 @@
-package com.example.GISHACK.ui.theme
+package com.example.gishack.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

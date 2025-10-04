@@ -13,7 +13,7 @@ activityCompose = "1.10.1"
 composeBom = "2025.07.00"
 appcompat = "1.7.1"
 material = "1.12.0"
-hilt = "2.55"
+hilt = "2.47"
 hiltNavigationCompose = "1.2.0"
 material3 = "1.3.2"
 media3Exoplayer = "1.8.0"
@@ -25,6 +25,7 @@ navigation = "2.9.3"
 orbit = "9.0.0"
 appMetrica = "6.0.0"
 retrofit = "2.11.0"
+koin = "4.1.1"
 okhttp = "4.12.0"
 material3Android = "1.3.2"
 sdkMap = "latest.release"
@@ -68,6 +69,9 @@ compose-map = { module = "ru.dgis.sdk:compose-map", version.ref = "composeMap" }
 haze = { module = "dev.chrisbanes.haze:haze", version.ref = "haze" }
 haze-materials = { module = "dev.chrisbanes.haze:haze-materials", version.ref = "haze" }
 lottie = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 
 #Billing
 cloudpayments = { group = "ru.cloudpayments.gitpub.integrations.sdk", name = "cloudpayments-android", version.ref = "cloudpayments-android" }
@@ -151,10 +155,11 @@ google-services = { id = "com.google.gms.google-services", version.ref = "google
 
 [bundles]
 compose = ["androidx-activity-compose", "androidx-compose-ui", "androidx-compose-bom", "androidx-compose-ui-graphics", "androidx-compose-ui-tooling", "androidx-compose-ui-tooling-preview", "androidx-compose-navigation"]
-hilt = ["hilt-android", "hilt-navigation-compose"]
 androidx = ["androidx-core-ktx", "androidx-lifecycle-runtime-ktx"]
 network = ["retrofit", "retrofit-converter-gson", "okhttp", "okhttp-logging-interceptor"]
 orbit = ["orbit-core", "orbit-viewmodel", "orbit-compose"]
 database = ["room-runtime", "room-ktx", "room-compiler"]
 coroutines = ["coroutines-android", "coroutines-core"]
 media = ["androidx-media3-exoplayer", "androidx-media3-ui", "androidx-media3-common"]
+
+koin = ["koin-android", "koin-compose", "koin-core"]
