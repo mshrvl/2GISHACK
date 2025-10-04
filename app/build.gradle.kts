@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose)
+    alias(libs.plugins.org.jetbrains.kotlin.plugin.serialization)
 }
 
 android {
@@ -9,7 +10,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "ru.gishackathon.app06.07"
+        applicationId = "ru.gishackathon.app06"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
