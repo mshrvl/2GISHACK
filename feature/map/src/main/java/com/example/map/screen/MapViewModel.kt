@@ -14,15 +14,26 @@ class MapViewModel : ViewModel(), ContainerHost<MapScreenState, Nothing> {
 
     override val container = container<MapScreenState, Nothing>(MapScreenState())
 
-    fun dispatch() {}
-
-    init {
-        updatePosition()
-    }
-    private fun smth() = intent {
+    fun dispatch(action: MapScreenAction) {
+        when (action) {
+            is MapScreenAction.getCurrentPosition -> updatePosition(action.lat, action.long)
+        }
     }
 
-    private fun createMapOptions(): MapOptions {
+    private fun updatePosition(latitude: Double, longitude: Double) = intent {
+        reduce {
+            state.copy(
+                map = MapComposableState(
+                    mapOptions = createMapOptions(
+                        latitude = latitude,
+                        longitude = longitude
+                    )
+                )
+            )
+        }
+    }
+
+    private fun createMapOptions(latitude: Double, longitude: Double): MapOptions {
         val cameraPosition = CameraPosition(
             point = GeoPoint(
                 latitude = 55.760898,
@@ -36,9 +47,5 @@ class MapViewModel : ViewModel(), ContainerHost<MapScreenState, Nothing> {
             position = cameraPosition
         }
 
-    }
-
-    private fun updatePosition() = intent {
-        reduce { state.copy(map = MapComposableState(mapOptions = createMapOptions())) }
     }
 }
