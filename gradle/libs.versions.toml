@@ -1,6 +1,7 @@
 [versions]
 agp = "8.8.2"
 animation = "1.8.3"
+composeMap = "12.4.0"
 haze = "1.6.0"
 kotlin = "2.1.0"
 coreKtx = "1.16.0"
@@ -27,6 +28,7 @@ retrofit = "2.11.0"
 okhttp = "4.12.0"
 material3Android = "1.3.2"
 sdkMap = "latest.release"
+sdkMapVersion = "12.4.0"
 uiToolingPreviewAndroid = "1.8.3"
 media3Session = "1.8.0"
 runtimeAndroid = "1.8.3"
@@ -62,6 +64,7 @@ androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+compose-map = { module = "ru.dgis.sdk:compose-map", version.ref = "composeMap" }
 haze = { module = "dev.chrisbanes.haze:haze", version.ref = "haze" }
 haze-materials = { module = "dev.chrisbanes.haze:haze-materials", version.ref = "haze" }
 lottie = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie" }
@@ -123,6 +126,7 @@ androidx-datastore-core-android = { group = "androidx.datastore", name = "datast
 
 datastore-preferenses = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastoreCoreAndroid" }
 sdk-map = { module = "ru.dgis.sdk:sdk-map", version.ref = "sdkMap" }
+sdk-map-v1240 = { module = "ru.dgis.sdk:sdk-map", version.ref = "sdkMapVersion" }
 serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
 firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }

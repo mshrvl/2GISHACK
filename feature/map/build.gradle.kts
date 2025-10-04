@@ -49,8 +49,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.hilt.android)
+    implementation(libs.bundles.hilt)
     ksp(libs.hilt.compiler)
     implementation(libs.bundles.orbit)
     implementation (libs.sdk.map)
+    implementation(libs.compose.map)
 }

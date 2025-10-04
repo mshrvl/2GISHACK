@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose)
     alias(libs.plugins.org.jetbrains.kotlin.plugin.serialization)
+    alias(libs.plugins.ksp.plugin)
+    alias(libs.plugins.hilt.android.plugin)
 }
 
 android {
@@ -59,6 +61,8 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     implementation (libs.sdk.map)
     implementation(libs.bundles.compose)
+    implementation(libs.bundles.hilt)
+    ksp(libs.hilt.compiler)
 
     implementation(project(":data"))
     implementation(project(":feature:auth"))
