@@ -8,6 +8,8 @@ coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.3.0"
 espressoCore = "3.7.0"
+kotlinxSerializationCore = "1.9.0"
+kotlinxSerializationJson = "1.6.2"
 lifecycleRuntimeKtx = "2.9.2"
 activityCompose = "1.10.1"
 composeBom = "2025.07.00"
@@ -70,6 +72,8 @@ androidx-compose-navigation = { group = "androidx.navigation", name = "navigatio
 compose-map = { module = "ru.dgis.sdk:compose-map", version.ref = "composeMap" }
 haze = { module = "dev.chrisbanes.haze:haze", version.ref = "haze" }
 haze-materials = { module = "dev.chrisbanes.haze:haze-materials", version.ref = "haze" }
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationCore" }
+kotlinx-serialization-json-v162 = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 lottie = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
