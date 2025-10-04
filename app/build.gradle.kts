@@ -57,4 +57,11 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     implementation (libs.sdk.map)
+    implementation(libs.bundles.compose)
+
+    implementation(project(":data"))
+    implementation(project(":feature:auth"))
+    implementation(project(":feature:map"))
+    implementation(project(":feature:profile"))
+    implementation(project(":core"))
 }

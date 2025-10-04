@@ -44,6 +44,8 @@ google-services = "4.4.2"
 pagingCommon = "3.3.6"
 pagingRuntimeKtx = "3.3.6"
 pagingCompose = "3.3.6"
+navigationCommonKtx = "2.9.5"
+navigationRuntimeKtx = "2.9.5"
 
 [libraries]
 # Core
@@ -128,6 +130,8 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "pagingCommon" }
 androidx-paging-runtime-ktx = { group = "androidx.paging", name = "paging-runtime-ktx", version.ref = "pagingRuntimeKtx" }
 androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "pagingCompose" }
+androidx-navigation-common-ktx = { group = "androidx.navigation", name = "navigation-common-ktx", version.ref = "navigationCommonKtx" }
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
