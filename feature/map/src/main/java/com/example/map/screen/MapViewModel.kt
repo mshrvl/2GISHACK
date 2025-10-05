@@ -1,6 +1,7 @@
 package com.example.map.screen
 
 import androidx.lifecycle.ViewModel
+import com.example.data.MapApi
 import org.orbitmvi.orbit.ContainerHost
 import org.orbitmvi.orbit.viewmodel.container
 import ru.dgis.sdk.compose.map.MapComposableState
@@ -10,7 +11,7 @@ import ru.dgis.sdk.map.CameraPosition
 import ru.dgis.sdk.map.MapOptions
 import ru.dgis.sdk.map.Zoom
 
-class MapViewModel : ViewModel(), ContainerHost<MapScreenState, Nothing> {
+class MapViewModel(private val api: MapApi) : ViewModel(), ContainerHost<MapScreenState, Nothing> {
 
     override val container = container<MapScreenState, Nothing>(MapScreenState())
 
@@ -32,6 +33,13 @@ class MapViewModel : ViewModel(), ContainerHost<MapScreenState, Nothing> {
             )
         }
     }
+
+//    private fun getRoute() = intent  {
+//        val points = api.createRoot(body = CoordBody.body)
+//        reduce { state.copy(points = points.features.forEach { it.geometry.coordinates.forEach { } })}
+//    }
+
+
 
     private fun createMapOptions(latitude: Double, longitude: Double): MapOptions {
         val cameraPosition = CameraPosition(

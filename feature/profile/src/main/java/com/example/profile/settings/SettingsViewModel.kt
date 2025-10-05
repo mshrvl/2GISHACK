@@ -35,4 +35,5 @@ class SettingsViewModel(private val mapRepo: MapRepository) : ViewModel(),
             state.copy(stymuly = state.stymuly.copy(stimulus = updatedStimuli))
         }
     }
+    
 }

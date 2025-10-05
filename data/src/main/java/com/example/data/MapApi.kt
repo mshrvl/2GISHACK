@@ -1,5 +1,6 @@
 package com.example.data
 
+import com.example.data.repository.GeoJSONResponse
 import kotlinx.serialization.Serializable
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -22,7 +23,7 @@ interface MapApi {
     @POST("route/")
     suspend fun createRoot(
         @Body body: CoordBody
-    )
+    ): GeoJSONResponse
 }
 
 
@@ -32,4 +33,8 @@ data class CoordBody(
     val start_lon: Double = 37.624836,
     val end_lat: Double = 55.708716,
     val end_lon: Double = 37.622594
-)
+) {
+    companion object {
+        val body = CoordBody()
+    }
+}

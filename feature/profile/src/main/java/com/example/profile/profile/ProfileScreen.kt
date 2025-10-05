@@ -87,7 +87,7 @@ fun PersonalInfoBlock(
             OutlinedTextField(
                 modifier = Modifier.fillMaxWidth(),
                 onValueChange = {},
-                value = "",
+                value = "Петр",
                 shape = RoundedCornerShape(20.dp)
             )
             Text(text = "Фамилия")

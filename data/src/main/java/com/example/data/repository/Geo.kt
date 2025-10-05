@@ -15,5 +15,11 @@ data class Feature(
 @kotlinx.serialization.Serializable
 data class Geometry(
     val type: String,
-    val coordinates: List<List<Double>>
+    val coordinates: List<GeoPoint>
+)
+
+@kotlinx.serialization.Serializable
+data class GeoPoint(
+    val latitude: Double,
+    val longtude: Double
 )
