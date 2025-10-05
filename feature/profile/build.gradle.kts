@@ -54,4 +54,6 @@ dependencies {
     implementation(libs.bundles.orbit)
     implementation(libs.sdk.map)
     implementation(libs.compose.map)
+
+    implementation(project(":data"))
 }

@@ -6,8 +6,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class IrritantsResponse(
-    @SerialName("")
-    val irritants: List<IrritantsDto>
+    @SerialName("stimulus")
+    val stimulus: List<IrritantsDto>
 )
 
 @Serializable

@@ -1,5 +1,7 @@
 package com.example.profile.settings
 
+import com.example.data.IrritantsResponse
+
 data class SettingsState(
-    val alert: String = ""
+    val stymuly: IrritantsResponse = IrritantsResponse(emptyList())
 )

@@ -92,12 +92,11 @@ fun DontPanicApplication(
         },
         contentWindowInsets = WindowInsets(0, 0, 0, 0)
     ) { pv ->
-        val navController = rememberNavController()
         val maxSizeModifier = Modifier.fillMaxSize()
         NavHost(
             modifier = maxSizeModifier,
             navController = navController,
-            startDestination = Screen.Map.route,
+            startDestination = MapScreenDestination,
         ) {
             authNavGrap(
                 modifier = maxSizeModifier,

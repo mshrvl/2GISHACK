@@ -50,4 +50,5 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.bundles.orbit)
+    implementation(project(":data"))
 }
