@@ -1,11 +1,13 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp.plugin)
+    alias(libs.plugins.compose)
     alias(libs.plugins.org.jetbrains.kotlin.plugin.serialization)
 }
 
 android {
-    namespace = "com.example.profile"
+    namespace = "ru.gishackathon.app06"
     compileSdk = 36
 
     defaultConfig {

@@ -32,7 +32,7 @@ fun MapScreen(
     viewModel: MapViewModel = koinViewModel()
 ) {
     LaunchedEffect(Unit)
-    { viewModel.dispatch(MapScreenAction.getCurrentPosition(37.625853, 55.695196)) }
+    { viewModel.dispatch(MapScreenAction.GetCurrentPosition(37.625853, 55.695196)) }
 
     val state by viewModel.collectAsState()
     val map by state.map.map.collectAsState()

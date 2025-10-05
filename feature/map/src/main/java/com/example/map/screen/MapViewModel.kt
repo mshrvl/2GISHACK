@@ -16,7 +16,7 @@ class MapViewModel : ViewModel(), ContainerHost<MapScreenState, Nothing> {
 
     fun dispatch(action: MapScreenAction) {
         when (action) {
-            is MapScreenAction.getCurrentPosition -> updatePosition(action.lat, action.long)
+            is MapScreenAction.GetCurrentPosition -> updatePosition(action.lat, action.long)
         }
     }
 

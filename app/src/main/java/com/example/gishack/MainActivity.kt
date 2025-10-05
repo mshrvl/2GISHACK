@@ -19,7 +19,6 @@ class MainActivity : ComponentActivity() {
                     DontPanicApplication(modifier = Modifier)
                 }
             }
-            //DGis.initialize(applicationContext)
         }
     }
 }

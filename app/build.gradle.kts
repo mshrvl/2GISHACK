@@ -62,6 +62,7 @@ dependencies {
     implementation(libs.bundles.compose)
     implementation(libs.bundles.koin)
 
+
     implementation(project(":data"))
     implementation(project(":feature:auth"))
     implementation(project(":feature:map"))
