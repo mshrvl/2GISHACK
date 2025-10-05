@@ -94,14 +94,14 @@ fun PersonalInfoBlock(
             OutlinedTextField(
                 modifier = Modifier.fillMaxWidth(),
                 onValueChange = {},
-                value = "",
+                value = "Фамилия",
                 shape = RoundedCornerShape(20.dp)
             )
             Text(text = "Отчество")
             OutlinedTextField(
                 modifier = Modifier.fillMaxWidth(),
                 onValueChange = {},
-                value = "",
+                value = "Фамилия",
                 shape = RoundedCornerShape(20.dp)
             )
             Text(text = "Дата рождения")
@@ -116,7 +116,7 @@ fun PersonalInfoBlock(
             OutlinedTextField(
                 modifier = Modifier.fillMaxWidth(),
                 onValueChange = {},
-                value = "",
+                value = "test@mail.ru",
                 shape = RoundedCornerShape(20.dp)
             )
         }

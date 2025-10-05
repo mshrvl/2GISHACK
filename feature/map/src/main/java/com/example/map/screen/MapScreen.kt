@@ -108,8 +108,6 @@ fun MapControls(map: Map) {
         ) {
             IndoorComposable(map)
         }
-
-        // Получаем идентификатор ресурса по имени и типу (drawable)
         val imageResId = remember {
             context.resources.getIdentifier("our", "drawable", context.packageName)
         }
