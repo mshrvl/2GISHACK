@@ -2,14 +2,17 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose)
+    alias(libs.plugins.org.jetbrains.kotlin.plugin.serialization)
+    alias(libs.plugins.ksp.plugin)
+
 }
 
 android {
-    namespace = "com.example.GISHACK"
+    namespace = "com.example.gishack"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "ru.gishackathon.app06.07"
+        applicationId = "ru.gishackathon.app06"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -28,11 +31,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -45,7 +48,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
-    //implementation(libs.bundles)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
@@ -57,4 +59,13 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     implementation (libs.sdk.map)
+    implementation(libs.bundles.compose)
+    implementation(libs.bundles.koin)
+
+
+    implementation(project(":data"))
+    implementation(project(":feature:auth"))
+    implementation(project(":feature:map"))
+    implementation(project(":feature:profile"))
+    implementation(project(":core"))
 }
