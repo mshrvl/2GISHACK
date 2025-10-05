@@ -12,12 +12,14 @@ data class IrritantsResponse(
 
 @Serializable
 data class IrritantsDto(
+    @SerialName("name")
+    val name: String?,
     @SerialName("id")
     val id: Int?,
     @SerialName("code")
     val code: String?,
     @SerialName("is_active")
-    val isActive: Boolean?,
+    val isActive: Boolean,
     @SerialName("type")
     val type: String?
 )

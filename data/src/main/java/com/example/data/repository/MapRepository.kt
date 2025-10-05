@@ -8,4 +8,8 @@ class MapRepository(private val mapApi: MapApi) {
     suspend fun getStimuli(): IrritantsResponse {
         return mapApi.getStimuly()
     }
+
+    suspend fun setStimulus(id: Int, isSelected: Boolean) {
+        mapApi.setStatusStimuly(id, isSelected)
+    }
 }

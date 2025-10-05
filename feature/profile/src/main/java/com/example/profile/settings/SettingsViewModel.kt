@@ -12,7 +12,7 @@ class SettingsViewModel(private val mapRepo: MapRepository) : ViewModel(),
 
     fun dispatch(action: SettingsAction) {
         when (action) {
-            is SettingsAction.OnPressure -> {}
+            is SettingsAction.OnPressure -> onCheckAlert(action.isChecked, action.id)
             is SettingsAction.GetStimulus -> getData()
         }
     }
@@ -23,9 +23,10 @@ class SettingsViewModel(private val mapRepo: MapRepository) : ViewModel(),
 
     private fun getData() = intent {
         val stimuly = mapRepo.getStimuli()
+        reduce { state.copy(stymuly = stimuly) }
     }
 
-    private fun onCheckAlert(isChecked: Boolean) = intent {
-
+    private fun onCheckAlert(isChecked: Boolean, id: Int) = intent {
+        mapRepo.setStimulus(id, !isChecked)
     }
 }
