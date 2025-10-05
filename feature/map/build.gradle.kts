@@ -54,5 +54,6 @@ dependencies {
     implementation(libs.bundles.orbit)
     implementation (libs.sdk.map)
     implementation(libs.compose.map)
+    implementation("ru.dgis.sdk:sdk-full:latest.release")
     implementation(project(":data"))
 }
